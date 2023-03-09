@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Switch from "/src/Components/switch/Switch";
-
+import Search from "../search/search";
 function PanelSwitch(props) {
   
   const { title } = props;
   const [btnGo, setBtnGo] = useState(true)
-
+  const generatePassword = () =>{
+    
+  }
   const panelConf = {
     width: "28rem",
     height: "70px",
@@ -16,7 +18,6 @@ function PanelSwitch(props) {
     justifyContent: "space-Around",
     alignItems: "center",
   };
-
   const buttonStyle = {
     width: "100%",
     height: "100%",
@@ -31,7 +32,7 @@ function PanelSwitch(props) {
   return (
     <>
       <div style={panelConf}>
-        <button style={buttonStyle} onClick={setBtnGo}>
+        <button style={buttonStyle} onClick={generatePassword}>
           {title}
         </button>
       </div>

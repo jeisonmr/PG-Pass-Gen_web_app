@@ -1,3 +1,4 @@
+import zIndex from "@mui/material/styles/zIndex";
 import React from "react";
 import Toggle from "../switch/Switch";
 
@@ -9,7 +10,10 @@ function Navbar() {
     backgroundColor: "var(--cl-5)",
     display: "flex",
     justifyContent: "end",
-    alignItems: "center"
+    alignItems: "center",
+    position: "fixed",
+    top : "0",
+    zIndex : "999",
 }
 
   return (

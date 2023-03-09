@@ -1,8 +1,14 @@
 import { fontSize, textAlign } from "@mui/system";
-import React from "react";
-
+import React, { useRef } from "react";
 
 function Search() {
+  const pass = useRef(null);
+  
+  const copyPass = () => {
+    pass.current.select();
+    document.execCommand("copy");
+  };
+
   const search = {
     fontSize: "35px",
     color: "var(--cl-1)",
@@ -13,16 +19,25 @@ function Search() {
     borderStyle: "dashed",
     border: "1px dashed var(--cl-1)",
 
+    
+    textAlign: "center",
+  };
+  const containerSearch = {
     margin: "40px 0 15px 0",
     padding: " 0 10px",
-    textAlign: "center",
-
-  };
+  }
 
   return (
-    <>
-      <input style={search} className="foc" type="text" />
-    </>
+    <div onClick={copyPass} style={containerSearch}
+    >
+      <input
+        style={search}
+        className="search"
+        type="text"
+        value={"%ferrERFD23!$S"}
+        ref={pass}
+      />
+    </div>
   );
 }
 
