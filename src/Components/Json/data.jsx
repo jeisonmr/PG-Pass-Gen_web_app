@@ -1,9 +1,9 @@
-import moon from "../../img/moon.webp";
-import sun from "../../img/sun.webp";
-import down from "../../img/download.webp";
-import windows from "../../img/windows.webp";
-import mac from "../../img/macos.webp";
-import github from "../../img/github.webp";
+import moon from "/public/img/moon.webp";
+import sun from "/public/img/sun.webp";
+import down from "/public/img/download.webp";
+import windows from "/public/img/windows.webp";
+import mac from "/public/img/macos.webp";
+import github from "/public/img/github.webp";
 
 
 const data =  {
@@ -15,3 +15,5 @@ const data =  {
       images: [moon,sun,down,windows,mac,github]
 
 }
+
+export default data;
