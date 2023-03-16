@@ -1,5 +1,5 @@
 import { height } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 import PanelSwitch from "../../Components/panels/panelSwitch";
 import PanelButton from "../../Components/panels/panelButton";
 import PanelLength from "../../Components/panels/panelLength";
@@ -11,6 +11,7 @@ import DownloadSection from "../download/download";
 import "/src/Styles/root.css";
 
 function Pass() {
+  // Estilos
   const homePass = {
     width: "100%",
     height: "100%",
@@ -63,6 +64,12 @@ function Pass() {
     bottom: "0",
   };
 
+  const [value, setValue] = useState(null);
+
+  const send = () => {
+    setValue(console.log(value));
+  };
+
   return (
     <>
       <section style={homePass}>
@@ -72,14 +79,14 @@ function Pass() {
           <Search />
           <main style={panelContainer}>
             <div style={panelColumnLeft}>
-              <PanelSwitch title="Incluye Mayusculas" />
-              <PanelSwitch title={"Incluye Minusculas"} />
-              <PanelSwitch title={"Incluye Numeros"} />
-              <PanelSwitch title={"Incluye Caracteres"} />
+              <PanelSwitch title={"Incluye Mayusculas"} color={"primary"} />
+              <PanelSwitch title={"Incluye Minusculas"} color={"primary"} />
+              <PanelSwitch title={"Incluye Numeros"} color={"primary"} />
+              <PanelSwitch title={"Incluye Caracteres"} color={"primary"} />
             </div>
             <div style={panelColumnRight}>
               <PanelLength title={"Nivel "} />
-              <PanelButton title={"GO!"} />
+              <PanelButton/>
             </div>
           </main>
         </div>

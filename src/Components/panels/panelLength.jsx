@@ -1,13 +1,15 @@
 import { React, useState } from "react";
-import Switch from "/src/Components/switch/Switch";
 
-function PanelSwitch(props) {
+
+function PanelLength(props) {
   const { title } = props;
   const  [valueRange, setValueRange] =  useState(10);
 
   const eventRange = (e) =>{
-  setValueRange(e.target.value);
+  return setValueRange(e.target.value);
   }
+
+  // Estilos
   const panelConf = {
     width: "28rem",
     height: "70px",
@@ -19,7 +21,6 @@ function PanelSwitch(props) {
     justifyContent: "space-Around",
     fontSize: "10px",
   };
-
   const rangeConf = {
     width: "80%",
     margin: "0 auto",
@@ -27,7 +28,7 @@ function PanelSwitch(props) {
   const value = {
     margin: "0 20px",
   };
-
+// End Estilos
   return (
     <>
       <div style={panelConf}>
@@ -44,4 +45,4 @@ function PanelSwitch(props) {
   );
 }
 
-export default PanelSwitch;
+export default PanelLength;

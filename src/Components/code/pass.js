@@ -5,5 +5,3 @@ const characters = (level) => {
   }
   console.log(character);
 };
-
-

@@ -274,4 +274,3 @@ btn_copiar.addEventListener('click', function(){
   txt_password.select();
   document.execCommand('copy');
 });
-wbfQWCwbfQWC

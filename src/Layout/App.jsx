@@ -2,6 +2,8 @@ import React from "react";
 import Pass from "../View/home/homePass";
 import Download from "../View/download/download";
 import Footer from "../View/footer/footer";
+import  SwitchProvider  from "../Context/switchProvider";
+
 
 function App() {
   const dimensiones = {
@@ -10,11 +12,13 @@ function App() {
   };
 
   return (
-    <main style={dimensiones}>
-      <Pass />
-      <Download />
-      <Footer />
-    </main>
+    <SwitchProvider>
+      <main style={dimensiones}>
+        <Pass />
+        <Download />
+        <Footer />
+      </main>
+    </SwitchProvider>
   );
 }
 

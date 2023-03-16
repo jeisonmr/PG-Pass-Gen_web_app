@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-import Switch from "/src/Components/switch/Switch";
-import Search from "../search/search";
-function PanelSwitch(props) {
-  
-  const { title } = props;
-  const [btnGo, setBtnGo] = useState(true)
-  const generatePassword = () =>{
-    
+import React, { useState, useContext } from "react";
+import { SwitchContext } from "../../Context/SwitchContext";
+
+function PanelButton() {
+  // const check = useContext(SwitchContext);
+  const { toggle_1 } = useContext(SwitchContext);
+
+  function getValue() {
+    console.log(toggle_1);
   }
+
+  // ---------------------------------------------------------------------------
   const panelConf = {
     width: "28rem",
     height: "70px",
@@ -25,19 +27,19 @@ function PanelSwitch(props) {
     border: "none",
     background: "var(--cl-6)",
     fontFamily: "var(--font-1)",
-    fontSize : "20px",
-    color: "var(--cl-3)"
+    fontSize: "20px",
+    color: "var(--cl-3)",
   };
 
   return (
     <>
       <div style={panelConf}>
-        <button style={buttonStyle} onClick={generatePassword}>
-          {title}
+        <button style={buttonStyle} onClick={getValue}>
+          Go!
         </button>
       </div>
     </>
   );
 }
 
-export default PanelSwitch;
+export default PanelButton;

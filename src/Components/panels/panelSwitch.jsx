@@ -1,10 +1,11 @@
-import React from "react";
-import Switch from "/src/Components/switch/Switch";
+import React, { useState } from "react";
+import  Toggle  from "/src/Components/switch/Switch";
 
 function PanelSwitch(props) {
-  
-      const { title } = props;
+  const { title } = props;
+  // const [mensaje, setMensaje] = useState(false);
 
+  //------------------------------------------------------------------------
   const panelConf = {
     width: "28rem",
     height: "70px",
@@ -14,14 +15,14 @@ function PanelSwitch(props) {
     display: "flex",
     justifyContent: "space-Around",
     alignItems: "center",
-    fontSize :"10px",
+    fontSize: "10px",
   };
 
   return (
     <>
       <div style={panelConf}>
-        <p>{title}</p>
-        <Switch />
+        {title}
+        <Toggle>{title}</Toggle>
       </div>
     </>
   );
