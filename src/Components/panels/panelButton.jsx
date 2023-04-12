@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 import { SwitchContext } from "/src/Context/SwitchContext";
 import { useSelector } from "react-redux";
+// import Data from '../hooks/usePassword';
+
 
 function PanelButton() {
   const may = useSelector((state) => state.mayusculas.data);
@@ -8,6 +10,7 @@ function PanelButton() {
   const num = useSelector((state) => state.numeros.data);
   const car = useSelector((state) => state.caracteres.data);
   const range = useSelector((state) => state.rango.data);
+  // const { alfaCaracterPass, sendPass, numericPass, genPass } = Data;
 
   function getValue() {
     console.table(`
@@ -16,6 +19,8 @@ function PanelButton() {
           Numeros    : ${num}
           Caracteres : ${car}
           Rango      : ${range}`);
+
+        (may ? alfaCaracterPass(0, range) : null );
   }
 
   // ---------------------------------------------------------------------------

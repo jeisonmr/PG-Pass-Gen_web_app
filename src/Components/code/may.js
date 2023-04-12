@@ -20,9 +20,10 @@ const mayusculasMedio = () => {
   for (let i = 0; i < 8; i++) {
     mayMedio += serie.charAt(Math.floor(Math.random() * serie.length));
   }
+  console.log(mayMedio)
   return mayMedio;
 };
-// mayusculasMedio(15);
+mayusculasMedio(10);
 
 //  --- Mayusculas, Nivel : Segura, Longitud : < 23.
 const mayusculasSegura = () => {
