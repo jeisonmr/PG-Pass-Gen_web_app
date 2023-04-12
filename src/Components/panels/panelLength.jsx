@@ -1,13 +1,26 @@
 import { React, useState } from "react";
+import { useDispatch } from "react-redux";
 
 
 function PanelLength(props) {
   const { title } = props;
   const  [valueRange, setValueRange] =  useState(10);
+  const dispatch = useDispatch();
+
 
   const eventRange = (e) =>{
-  return setValueRange(e.target.value);
+    // let value = e.target.value;
+    // actualizarValor(value);
+    return setValueRange( e.target.value);
+
   }
+
+  dispatch({type: "SET_RANGE", payload: valueRange})
+  // const actualizarValor = (value) =>{
+  // }
+
+  
+
 
   // Estilos
   const panelConf = {

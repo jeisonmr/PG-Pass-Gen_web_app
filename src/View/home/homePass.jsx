@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import PanelSwitch from "../../Components/panels/panelSwitch";
 import PanelButton from "../../Components/panels/panelButton";
 import PanelLength from "../../Components/panels/panelLength";
-import Data from "/src/Components/Json/data";
+import Data from "../../Components/Json/data";
+// import Data from '/src/Components/Json/data'
 import NavBar from "/src/Components/navbar/Navbar";
 import Search from "/src/Components/search/search";
 import imgDown from "/public/img/download.webp";
@@ -79,14 +80,13 @@ function Pass() {
           <Search />
           <main style={panelContainer}>
             <div style={panelColumnLeft}>
-              <PanelSwitch title={"Incluye Mayusculas"} color={"primary"} />
-              <PanelSwitch title={"Incluye Minusculas"} color={"primary"} />
-              <PanelSwitch title={"Incluye Numeros"} color={"primary"} />
-              <PanelSwitch title={"Incluye Caracteres"} color={"primary"} />
+              {Data.opciones.map((i) => (
+                <PanelSwitch title={i.title} color={"primary"} tipo={i.case} />
+              ))}
             </div>
             <div style={panelColumnRight}>
               <PanelLength title={"Nivel "} />
-              <PanelButton/>
+              <PanelButton />
             </div>
           </main>
         </div>

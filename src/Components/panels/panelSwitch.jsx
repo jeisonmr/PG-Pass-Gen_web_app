@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import  Toggle  from "/src/Components/switch/Switch";
 
-function PanelSwitch(props) {
-  const { title } = props;
+function PanelSwitch({title, tipo}) {
+  // const { title } = props;
   // const [mensaje, setMensaje] = useState(false);
 
   //------------------------------------------------------------------------
@@ -22,7 +22,7 @@ function PanelSwitch(props) {
     <>
       <div style={panelConf}>
         {title}
-        <Toggle>{title}</Toggle>
+        <Toggle tipo={tipo}/>
       </div>
     </>
   );

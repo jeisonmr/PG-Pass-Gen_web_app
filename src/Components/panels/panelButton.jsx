@@ -1,12 +1,21 @@
 import React, { useState, useContext } from "react";
-import { SwitchContext } from "../../Context/SwitchContext";
+import { SwitchContext } from "/src/Context/SwitchContext";
+import { useSelector } from "react-redux";
 
 function PanelButton() {
-  // const check = useContext(SwitchContext);
-  const { toggle_1 } = useContext(SwitchContext);
+  const may = useSelector((state) => state.mayusculas.data);
+  const min = useSelector((state) => state.minusculas.data);
+  const num = useSelector((state) => state.numeros.data);
+  const car = useSelector((state) => state.caracteres.data);
+  const range = useSelector((state) => state.rango.data);
 
   function getValue() {
-    console.log(toggle_1);
+    console.table(`
+          Mayusculas : ${may}
+          Minusculas : ${min}
+          Numeros    : ${num}
+          Caracteres : ${car}
+          Rango      : ${range}`);
   }
 
   // ---------------------------------------------------------------------------
