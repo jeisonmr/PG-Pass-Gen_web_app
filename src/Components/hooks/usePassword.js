@@ -1,61 +1,45 @@
-import { useState } from "react";
-
-const [may, setMay] = useState({});
-// const [min, setMin] = useState(false);
-// const [num, setNum] = useState(false);
-// const [car, setCar] = useState(false);
-
-const genPass = (mod, long, num) => {
-  mod ? alfaCaracterPass(mod, long) : null;
-  num ? numericPass() : null;
-
-  const random = may + min + num + car;
-  let password = "";
-  for (let i = 0; i < 20; i++) {
-    password += random.charAt(Math.floor(Math.random() * random.length));
-  }
-  return password;
-};
-
-const numericPass = () => {
+const numericPass = (long) => {
   const numList_1 = new Uint32Array(1);
-  const numList_2 = new Uint32Array(2);
+  const numList_2 = new Uint32Array(1);
+
   window.crypto.getRandomValues(numList_1);
   window.crypto.getRandomValues(numList_2);
-  console.table(numList_1[0]);
-  console.table(numList_2[0]);
-  setNum(numList_1 + numList_2);
+
+  const numList_3 = [].concat(numList_1[0], numList_2[0]);
+
+  return numList_3;
 };
 
-const sendPass = (mod) => {
-  const type = "";
+const sendPass = (mod, long) => {
+  let type = "";
   switch (mod) {
     case 0:
       type = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      setMay(alfaCaracterPass(type));
+      return alfaCaracterPass(type, long);
     case 1:
       type = "abcdefghijklmnopqrstuvwxyz";
-      setMin(alfaCaracterPass(type));
+      return alfaCaracterPass(type, long);
     case 2:
+      return numericPass(long);
+    case 3:
       type = "!#$%&/(=?)¡¿'-_[+}:{";
-      setCar(alfaCaracterPass(type));
+      return alfaCaracterPass(type, long);
+
     default:
       break;
   }
 };
 
-const alfaCaracterPass = (mod, long) => {
+const alfaCaracterPass = (type, long) => {
   let code = "";
-  for (const i in long) {
+  for (let i = 0; i < long; i++) {
     code += type.charAt(Math.floor(Math.random() * type.length));
   }
   return code;
 };
 
-
-export default{
-    alfaCaracterPass,
-    numericPass,
-    sendPass,
-    genPass
-}
+export default {
+  alfaCaracterPass,
+  numericPass,
+  sendPass
+};
