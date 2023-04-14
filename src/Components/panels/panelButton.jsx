@@ -1,55 +1,62 @@
-import React, { useState } from "react";
+// Importacion del Hook de React.
+import { useState } from "react";
+
+// Importancion de los Hooks de Redux.
 import { useDispatch, useSelector } from "react-redux";
-import Data from "../hooks/usePassword";
+
+// Importacion de la
+import sendPassFunction from "../hooks/usePassword";
 
 function PanelButton() {
+
+  // Declaración del dispatch.
+  const dispatch = useDispatch();
+  
+  // Estados de por cada tipo de contraseña.
   const [mayPass, setMayPass] = useState();
   const [minPass, setMinPass] = useState();
   const [numPass, setNumPass] = useState();
   const [carPass, setCarPass] = useState();
 
-  const dispatch = useDispatch();
-
+  // Valor por cada tipo de contraseña obtenido.
   const may = useSelector((state) => state.mayusculas.data);
   const min = useSelector((state) => state.minusculas.data);
   const num = useSelector((state) => state.numeros.data);
   const car = useSelector((state) => state.caracteres.data);
+  // Valor del rango del nivel obtenido.
   const range = useSelector((state) => state.rango.data);
-  const { sendPass } = Data;
 
+
+  // Desectruturación de la funcion importada.
+  const { sendPass } = sendPassFunction;
+
+  // Array Function que genera la contraseña con la combinacion de tipos y rango seleccionado.
   const genPass = (long) => {
     const random = mayPass + minPass + numPass + carPass;
     let password = "";
-    for (let i = 0; i < long; i++) {
-      password += random.charAt(Math.floor(Math.random() * random.length));
+
+    if (random) {
+      for (let i = 0; i < long; i++) {
+        password += random.charAt(Math.floor(Math.random() * random.length));
+      }
+    }else{
+      password = ""
     }
-    console.log(password);
+    // console.log(password);
     dispatch({type: "SET_SEARCH", payload: password})
   };
 
-
+// Funcion que captura los tipos y rango y cambia el valor del estado.
   function getValue() {
-    console.table(`
-          Mayusculas : ${may}
-          Minusculas : ${min}
-          Numeros    : ${num}
-          Caracteres : ${car}
-          Rango      : ${range}`);
-
-    setMayPass(may ? sendPass(0, range) : "");
-    setMinPass(min ? sendPass(1, range) : "");
-    setNumPass(num ? sendPass(2, range) : "");
-    setCarPass(car ? sendPass(3, range) : "");
-
+    setMayPass(may && sendPass(0, range));
+    setMinPass(min && sendPass(1, range));
+    setNumPass(num && sendPass(2, range));
+    setCarPass(car && sendPass(3, range));
     genPass(range);
-    // showValue();
+    
   }
 
-  // const showValue = () =>{
-  //   console.table(mayPass, minPass, ...numPass, carPass);
-  // }
-
-  // ---------------------------------------------------------------------------
+  // Estilos del componente PanelButton.
   const panelConf = {
     width: "28rem",
     height: "70px",

@@ -1,11 +1,14 @@
+// Importación del Hook combinador de reducers de Redux.
 import { combineReducers } from "redux";
 
-import mayReducer from './reducers/mayReducer';
-import minReducer from './reducers/minReducer';
-import numReducer from './reducers/numReducer';
-import carReducer from './reducers/carReducer';
-import rangeReducer from './reducers/rangeReducer';
-import searchReducer from './reducers/searchreducer';
+// Importación de Reducers
+import mayReducer from "./reducers/mayReducer";
+import minReducer from "./reducers/minReducer";
+import numReducer from "./reducers/numReducer";
+import carReducer from "./reducers/carReducer";
+import rangeReducer from "./reducers/rangeReducer";
+import searchReducer from "./reducers/searchreducer";
+
 // Combina los reducers individuales en un rootReducer
 const rootReducer = combineReducers({
   mayusculas: mayReducer,
@@ -13,8 +16,7 @@ const rootReducer = combineReducers({
   numeros: numReducer,
   caracteres: carReducer,
   rango: rangeReducer,
-  search: searchReducer
+  search: searchReducer,
 });
 
 export default rootReducer;
-

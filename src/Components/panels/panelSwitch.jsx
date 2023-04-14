@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+// Importanción del subComponente Switch Toggle.
 import  Toggle  from "/src/Components/switch/Switch";
 
 function PanelSwitch({title, tipo}) {
-  // const { title } = props;
-  // const [mensaje, setMensaje] = useState(false);
-
-  //------------------------------------------------------------------------
+  
+  // Estilos del Componente PanelSwitch.
   const panelConf = {
     width: "28rem",
     height: "70px",
@@ -21,7 +19,9 @@ function PanelSwitch({title, tipo}) {
   return (
     <>
       <div style={panelConf}>
-        {title}
+        {title} {/* Parametro titulo */}
+
+        {/* Render del Switch enviando como parametro el tipo contraseña*/}
         <Toggle tipo={tipo}/>
       </div>
     </>

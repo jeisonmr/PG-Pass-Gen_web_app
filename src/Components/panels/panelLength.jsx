@@ -1,28 +1,28 @@
-import { React, useState } from "react";
+// Importación de los Hooks de React y Redux .
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 
-function PanelLength(props) {
-  const { title } = props;
+function PanelLength({title}) {
+
+  // Desectructuración del prop.
+  // const { title } = props;
+
+  // Valor de Range por defecto de nivel 10
   const  [valueRange, setValueRange] =  useState(10);
+  
+  // Declaración del dispatch.
   const dispatch = useDispatch();
 
-
+// Función que captura el valor actualiza el valor del estado.
   const eventRange = (e) =>{
-    // let value = e.target.value;
-    // actualizarValor(value);
     return setValueRange( e.target.value);
-
   }
 
+  // se envia el tipo y valor del estado a nivel global.
   dispatch({type: "SET_RANGE", payload: valueRange})
-  // const actualizarValor = (value) =>{
-  // }
 
-  
-
-
-  // Estilos
+  // Estilos del componente PanelLength.
   const panelConf = {
     width: "28rem",
     height: "70px",
@@ -45,6 +45,8 @@ function PanelLength(props) {
   return (
     <>
       <div style={panelConf}>
+        
+        {/* Render del input range */}
         <input
           type="range"
           style={rangeConf}
@@ -52,6 +54,7 @@ function PanelLength(props) {
           min={4}
           max={20}
         />
+        {/* Render de la descripción del nivel */}
         <p style={value}>{title  + valueRange}</p>
       </div>
     </>

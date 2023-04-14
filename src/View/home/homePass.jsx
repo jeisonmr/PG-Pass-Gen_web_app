@@ -1,18 +1,22 @@
-import { height } from "@mui/system";
-import React, { useState } from "react";
-import PanelSwitch from "../../Components/panels/panelSwitch";
-import PanelButton from "../../Components/panels/panelButton";
-import PanelLength from "../../Components/panels/panelLength";
+// Importación del Hook useState
+import { useState } from "react";
+
+// Importación de los commponentes.
+import PanelSwitch from "../../Components/panels/panelSwitch"; //Switch.
+import PanelButton from "../../Components/panels/panelButton"; //Boton Go!
+import PanelLength from "../../Components/panels/panelLength"; //Range Nivel.
+
+// Importación de la información del objeto.
 import Data from "../../Components/Json/data";
-// import Data from '/src/Components/Json/data'
-import NavBar from "/src/Components/navbar/Navbar";
-import Search from "/src/Components/search/search";
-import imgDown from "/public/img/download.webp";
-import DownloadSection from "../download/download";
+
+// Importación de subcomponentes.
+import Search from "/src/Components/search/search"; //Input Text
+import imgDown from "/public/img/download.webp"; //Imagen sección descargar app.
+
 import "/src/Styles/root.css";
 
 function Pass() {
-  // Estilos
+  // Estilos del componente Pass
   const homePass = {
     width: "100%",
     height: "100%",
@@ -65,31 +69,31 @@ function Pass() {
     bottom: "0",
   };
 
-  const [value, setValue] = useState(null);
-
-  const send = () => {
-    setValue(console.log(value));
-  };
-
   return (
     <>
       <section style={homePass}>
-        <NavBar />
         <div>
-          <h1 style={title}>{Data.title}</h1>
-          <Search />
+          <h1 style={title}>{Data.title}</h1> {/* Renderiza el titulo */}
+
+          <Search /> {/* Input: Se renderiza la contraseña generada */}
+
           <main style={panelContainer}>
+            {/* Renderiza un conjunto de componentes Switch */}
             <div style={panelColumnLeft}>
               {Data.opciones.map((i) => (
-                <PanelSwitch title={i.title} color={"primary"} tipo={i.case} />
+                <PanelSwitch key={i.title} title={i.title} color={"primary"} tipo={i.case} />
               ))}
             </div>
+
+            {/* Renderiza los componentes (Rango de niveles y el Boton Go!) */}
             <div style={panelColumnRight}>
               <PanelLength title={"Nivel "} />
               <PanelButton />
             </div>
           </main>
         </div>
+        
+        {/* Renderiza la imagen down */}
         <a href={`#download`}>
           <img src={imgDown} alt="Bajar" style={imgStyle} />
         </a>

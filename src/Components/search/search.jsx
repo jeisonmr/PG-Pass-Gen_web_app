@@ -1,19 +1,28 @@
-import { useSelect } from "@mui/base";
-import { fontSize, textAlign } from "@mui/system";
-import React, { useRef, useState } from "react";
+//
+import { useRef, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
+// Función para copiar el contenido del input.
+const copyPass = () => {
+  pass.current.select();
+  document.execCommand("copy");
+};
+
 function Search() {
-  // const [searchValue, setSearchValue] = useState();
+  // Estado inicial de intput.
+  const [inputValue, setInputValue] = useState();
+
+  // Se almacena el valor global en la variable "searchPass"
   const searchPass = useSelector((state) => state.search.data);
-  // setSearchValue(searchPass);
+
+  useEffect(() => {
+    setInputValue(searchPass);
+  }, [searchPass]);
+
   const pass = useRef(null);
 
-  const copyPass = () => {
-    pass.current.select();
-    document.execCommand("copy");
-  };
-
+  // Estilos del componente Search.
   const search = {
     fontSize: "35px",
     color: "var(--cl-3)",
@@ -33,11 +42,12 @@ function Search() {
 
   return (
     <div onClick={copyPass} style={containerSearch}>
+      {/* Input tipo text */}
       <input
         style={search}
         className="search"
         type="text"
-        value={searchPass}
+        value={inputValue} // se le asigna el valor del estado.
         ref={pass}
       />
     </div>

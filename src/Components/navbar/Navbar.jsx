@@ -1,9 +1,7 @@
-import zIndex from "@mui/material/styles/zIndex";
-import React from "react";
-import Toggle from "../switch/Switch";
-
+// import Toggle from "../switch/Switch";
 
 function Navbar() {
+  // Estilos del componente NavBar
   const navBar = {
     width: "100%",
     height: "60px",
@@ -12,14 +10,14 @@ function Navbar() {
     justifyContent: "end",
     alignItems: "center",
     position: "fixed",
-    top : "0",
-    zIndex : "999",
-}
+    top: "0",
+    zIndex: "999",
+  };
 
   return (
     <nav style={navBar}>
-      <Toggle />
-      <Toggle />
+      {/* <Toggle />
+      <Toggle /> */}
     </nav>
   );
 }

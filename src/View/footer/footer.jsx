@@ -1,8 +1,10 @@
-import React from "react";
+// Importación de subcomponentes.
 import Data from "/src/Components/Json/data";
 import github from "/public/img/github.webp";
 
 function Footer() {
+
+  // Estilos del componente Footer.
   const footerView = {
     width: "100%",
     height: "10rem",
@@ -30,6 +32,7 @@ function Footer() {
   };
   return (
     <section style={footerView}>
+      {/* Render del logo y descripción */}
       <a href={Data.git} target="_blank">
         <img style={gitIcon} src={github} alt="" />
       </a>

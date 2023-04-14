@@ -1,11 +1,15 @@
-import React from "react";
+//Importación de la información del objeto
 import Data from "/src/Components/Json/data";
-import iconWin from "/public/img/windows.webp";
-import iconMac from "/public/img/macos.webp";
-import imageTop from "/public/img/ondaTop.svg";
-import imageBottom from "/public/img/ondaBottom.svg";
+
+// Importación de subcomponentes.
+import iconWin from "/public/img/windows.webp"; //Logo windows
+import iconMac from "/public/img/macos.webp"; //Logo macOs
+import imageTop from "/public/img/ondaTop.svg"; //Curva top
+import imageBottom from "/public/img/ondaBottom.svg"; //Curva bottom
 
 function Download() {
+
+  // Estilos del componente Donwload.
   const downView = {
     width: "100%",
     height: "140vh",
@@ -55,19 +59,21 @@ function Download() {
 
   return (
     <>
+    {/* Renderizado de la sección Descargar */}
       <section style={downView} id="download">
-        <img style={svgTop} src={imageTop} alt="" />
-        <h2 style={title}>{Data.subtitle}</h2>
-        <p style={subtitle}>{Data.description}</p>
+        <img style={svgTop} src={imageTop} alt="" /> {/* Imagen top */}
+        <h2 style={title}>{Data.subtitle}</h2> {/* Renderizado del titulo */}
+        <p style={subtitle}>{Data.description}</p> {/* Render del subtitulo */}
         <div>
+          {/* Renderizado de los botones */}
           <button style={btnDown}>
-            <img style={imgIcon} src={iconWin} alt="Icono de Windows" />
+            <img style={imgIcon} src={iconWin} alt="Icono de Windows" /> 
           </button>
           <button style={btnDown}>
             <img style={imgIcon} src={iconMac} alt="Icono de MacOS" />
           </button>
         </div>
-        <img style={svgBottom} src={imageBottom} alt="" />
+        <img style={svgBottom} src={imageBottom} alt="" /> {/* Imagen bottom */}
       </section>
     </>
   );

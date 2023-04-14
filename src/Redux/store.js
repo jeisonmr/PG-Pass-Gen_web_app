@@ -1,8 +1,10 @@
-// src/store.js
-import {createStore}  from 'redux';
-import rootReducer from './rootReducers';
-// importa el archivo con los reducers de tu aplicación
+// Importación de Hook de Redux.
+import { createStore } from "redux";
 
-const store = createStore(rootReducer); // crea el store de Redux con los reducers
+// Importación del ROOT-Reducer
+import rootReducer from "./rootReducers";
+
+// crea el store de Redux con los reducers.
+const store = createStore(rootReducer);
 
 export default store;
