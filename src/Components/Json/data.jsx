@@ -26,7 +26,7 @@ const data = {
       case: "CAR",
     },
   ],
-  copyright: "Copyright © 2021 - Desarrollado por Jeison Muñoz  @jeisonmr",
+  copyright: "Copyright © 2023 - Desarrollado por Jeison Muñoz  @jeisonmr",
   images: [moon, sun, down, github],
   git: "https://github.com/jeisonmr",
 };

@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 
+
+
 function PanelLength({title}) {
 
   // Desectructuración del prop.
@@ -44,7 +46,7 @@ function PanelLength({title}) {
 // End Estilos
   return (
     <>
-      <div style={panelConf}>
+      <div style={panelConf} className={"configLength"}>
         
         {/* Render del input range */}
         <input

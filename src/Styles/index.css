@@ -22,3 +22,11 @@ img {
   user-select: none;
   pointer-events: none;
 }
+@media only screen and (max-width: 576px) {
+  .configLength{
+        width: 90% !important;
+  }
+  .configSearch{
+    width: 100% !important;
+  }
+}

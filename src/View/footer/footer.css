@@ -1,0 +1,25 @@
+/* Estilos del componente Footer. */
+.footerView{
+  width: 100%;
+  height: 10rem;
+  background: var(--cl-1);
+  display: flex;
+  flex-Direction: column;
+  justify-Content: center;
+  align-Items: center;
+  font-Family: var(--font-1);
+  font-Size: 10px;
+  padding-Top: 70px;
+  color: var(--cl-3);
+}
+.gitIcon{
+  width: 40px;
+  margin-Bottom: 20px;
+}
+@media only screen and (max-width: 576px) {
+      .footerView > p{
+            text-align: center;
+            line-height: 1rem;
+            margin-bottom: 30px;
+      }
+    }

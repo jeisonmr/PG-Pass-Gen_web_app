@@ -80,8 +80,8 @@ function PanelButton() {
 
   return (
     <>
-      <div style={panelConf}>
-        <button style={buttonStyle} onClick={getValue}>
+      <div style={panelConf} className={"configLength"}>
+        <button style={buttonStyle} onClick={getValue} >
           Go!
         </button>
       </div>

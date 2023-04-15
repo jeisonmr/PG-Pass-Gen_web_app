@@ -1,6 +1,7 @@
 // Importanción del subComponente Switch Toggle.
 import  Toggle  from "/src/Components/switch/Switch";
 
+
 function PanelSwitch({title, tipo}) {
   
   // Estilos del Componente PanelSwitch.
@@ -18,7 +19,7 @@ function PanelSwitch({title, tipo}) {
 
   return (
     <>
-      <div style={panelConf}>
+      <div style={panelConf} className={"configLength"}>
         {title} {/* Parametro titulo */}
 
         {/* Render del Switch enviando como parametro el tipo contraseña*/}
