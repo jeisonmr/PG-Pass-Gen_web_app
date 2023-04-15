@@ -1,6 +1,6 @@
-*{
+* {
   box-sizing: border-box;
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
@@ -14,19 +14,27 @@ img {
   -user-drag: none;
 }
 
-.search{
+.search {
   pointer-events: none;
 }
-.search:focus{
+.search:focus {
   outline: none;
   user-select: none;
   pointer-events: none;
 }
 @media only screen and (max-width: 576px) {
-  .configLength{
-        width: 90% !important;
+  .configLength {
+    width: 90% !important;
   }
-  .configSearch{
+  .configSearch {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 834px) {
+  .configLength {
+    width: 98% !important;
+  }
+  .configSearch {
     width: 100% !important;
   }
 }

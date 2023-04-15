@@ -58,3 +58,15 @@
     line-height: 1.2rem;
   }
   }
+  @media only screen and (max-width: 834px) {
+    .downView{
+      height: 50rem;
+    }
+    .title_2{
+      font-size: 40px !important;
+    }
+    .subtitle{
+      font-size: 15px !important;
+      line-height: 1.2rem;
+    }
+  }
