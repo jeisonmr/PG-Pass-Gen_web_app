@@ -1,5 +1,5 @@
 // Importación del Hook de React.
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // Importación del componente Switch del Framework Material UI.
 import Switch from "@mui/material/Switch";
@@ -21,13 +21,11 @@ const Toggle = ({ tipo }) => {
   function toggleChange(e) {
     e.preventDefault();
     setCheck(e.target.checked);
+    actualizarValor({ check, mod });
+    console.log(check, mod)
   }
 
-  // Funcion que dispara la actualización de los estados.
-  function sendData() {
-    // console.log(check, mod)
-    actualizarValor({ check, mod });
-  }
+
 
   // Función que dispara el dispatch por cada switch toggle enviando el tipo y el valor del estado.
   const actualizarValor = ({ check, mod }) => {
@@ -56,7 +54,7 @@ const Toggle = ({ tipo }) => {
       <Switch
         checked={check}
         onChange={toggleChange}
-        onClick={sendData}
+        // onClick={sendData}
         inputProps={{ "aria-label": "controlled" }}
       />
     </>
