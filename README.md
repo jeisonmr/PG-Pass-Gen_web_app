@@ -18,7 +18,7 @@ Frameworks
  ![REACT](https://img.shields.io/badge/-React-000000?style=flat&logo=react)
  ![MATERIAL-UI](https://img.shields.io/badge/-MaterialUI-000000?style=flat&logo=mui)
 <br>
-Lenguages
+Languages
 <br>
  ![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
  ![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5)
