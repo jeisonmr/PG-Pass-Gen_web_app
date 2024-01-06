@@ -21,7 +21,7 @@ Frameworks
  <br>
  
 Languages
-<br>
+<br><br>
  ![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
  ![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5)
  ![CSS3](https://img.shields.io/badge/-CSS-000000?style=flat&logo=css3)
