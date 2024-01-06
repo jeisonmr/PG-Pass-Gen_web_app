@@ -11,7 +11,7 @@ import Data from "../../Components/Json/data";
 
 // Importación de subcomponentes.
 import Search from "/src/Components/search/search"; //Input Text
-import imgDown from "/public/img/download.webp"; //Imagen sección descargar app.
+import imgDown from "/public/img/scroll-down.gif"; //Imagen sección descargar app.
 
 // Importación de estilos.
 import "/src/Styles/root.css";

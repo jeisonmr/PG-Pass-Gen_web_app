@@ -45,12 +45,15 @@
   align-items: flex-start;
 }
 .imgStyle {
-  width: 20px;
-  height: 20px;
+  width: 50px;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
 }
 @media only screen and (max-width: 576px) {
+  .homePass{
+    height: auto;
+    padding: 10px 10px 100px 10px;
+  }
   .title {
     font-size: 20px !important;
   }
@@ -98,6 +101,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .imgStyle{
+    display: none;
   }
 }
 

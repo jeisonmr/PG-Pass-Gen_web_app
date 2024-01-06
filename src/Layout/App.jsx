@@ -1,7 +1,7 @@
 // Importación de componentes principales
 import NavBar from "/src/Components/navbar/Navbar";
 import Pass from "../View/home/homePass";
-import Download from "../View/download/download";
+import Information from "../View/informacion/informacion";
 import Footer from "../View/footer/footer";
 import store from "../Redux/store";
 // Importación del Provider de Redux.
@@ -22,7 +22,7 @@ function App() {
         {/* Componentes */}
         <NavBar />
         <Pass />
-        <Download />
+        <Information />
         <Footer />
       </main>
     </Provider>

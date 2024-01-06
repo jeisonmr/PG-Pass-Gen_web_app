@@ -9,7 +9,7 @@
 
 ## Download
 
-
+Version de Escritorio <a href="">Aquí</a>
 
 # Skills
 
@@ -17,8 +17,9 @@ Frameworks
  <br>
  ![REACT](https://img.shields.io/badge/-React-000000?style=flat&logo=react)
  ![MATERIAL-UI](https://img.shields.io/badge/-MaterialUI-000000?style=flat&logo=mui)
-<br>
-Lenguages
+ ![BOOTSTRAP](https://img.shields.io/badge/-Bootstrap-000000?style=for-the-badge&logo=bootstrap)
+ <br>
+Languages
 <br>
  ![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
  ![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5)
@@ -27,3 +28,4 @@ Lenguages
 Tools
 <br>
  ![NPM](https://img.shields.io/badge/-npm-000000?style=flat&logo=npm)
+ ![FIGMA](https://img.shields.io/badge/-Figma-000000?style=for-the-badge&logo=figma)

@@ -25,7 +25,8 @@ function Search() {
   };
   // Estilos del componente Search.
   const search = {
-    fontSize: "35px",
+    fontSize: "30px",
+    fontFamily: 'var(--font-3)',
     color: "var(--cl-3)",
     background: "var(--cl-4)",
 

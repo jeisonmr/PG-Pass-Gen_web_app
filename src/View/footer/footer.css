@@ -1,7 +1,7 @@
 /* Estilos del componente Footer. */
 .footerView{
   width: 100%;
-  height: 10rem;
+  height: auto;
   background: var(--cl-1);
   display: flex;
   flex-Direction: column;
@@ -9,17 +9,77 @@
   align-Items: center;
   font-Family: var(--font-1);
   font-Size: 10px;
-  padding-Top: 70px;
+  padding: 70px 0 30px 0;
   color: var(--cl-3);
 }
 .gitIcon{
   width: 40px;
   margin-Bottom: 20px;
 }
+.title_3{
+  font-size: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.subtitle_3{
+  font-size: 20px;
+  margin: 50px 0 100px 0;
+  font-family: var(--font-3);
+}
+.acordeonData{
+  padding: 0 200px;
+  margin-bottom: 300px;
+}
+
+.accordion-button{
+  background-color: #001629;
+  color: var(--cl-3);
+}
+
+.acordeonText{
+  font-family: var(--font-3);
+  font-size: 15px;
+  color: var(--cl-3);
+}
+.accordion-body{
+  padding: 50px;
+  background-color: #003e61;
+}
 @media only screen and (max-width: 576px) {
-      .footerView > p{
+  .footerView{
+    padding: 100px 25px 20px 25px !important;
+  }
+  .title_3{
+    font-size: 18px !important;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .subtitle_3{
+    font-size: 14px;
+    margin: 50px 0 100px 0;
+    font-family: var(--font-3);
+  }    
+  .footerView > p{
             text-align: center;
             line-height: 1rem;
             margin-bottom: 30px;
+      }
+    }
+
+    @media only screen and (max-width: 876px) {
+      .footerView{
+        padding: 100px 80px 20px 80px;
+      }
+      .title_3{
+        font-size: 30px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .subtitle_3{
+       text-align: center;
+      }  
+      .acordeonData{
+        padding: 0;
+        margin-bottom: 150px;
       }
     }
