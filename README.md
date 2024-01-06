@@ -9,7 +9,7 @@
 
 ## Download
 
-Version de Escritorio <a href="">Aquí</a>
+<!-- Version de Escritorio <a href="">Aquí</a> -->
 
 # Skills
 
@@ -19,6 +19,8 @@ Frameworks
  ![MATERIAL-UI](https://img.shields.io/badge/-MaterialUI-000000?style=flat&logo=mui)
  ![BOOTSTRAP](https://img.shields.io/badge/-Bootstrap-000000?style=for-the-badge&logo=bootstrap)
  <br>
+Languages
+<br>
 Languages
 <br>
  ![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
