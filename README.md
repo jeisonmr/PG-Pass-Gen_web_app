@@ -9,7 +9,7 @@
 
 ## Download
 
- Version de Escritorio <a href="https://drive.google.com/drive/folders/14EO31g8es-cLxPy2Txtx7FSTRV4Smyy6?usp=sharing">Aquí</a> 
+ Version de Escritorio <a href="https://drive.google.com/file/d/1JXTUxWE8kMMbXMQxITtppBjgsDaCPMBk/view?usp=sharing" target="_blank">Aquí</a> 
 
 # Skills
 
@@ -19,7 +19,7 @@ Frameworks
  ![MATERIAL-UI](https://img.shields.io/badge/-MaterialUI-000000?style=flat&logo=mui)
  ![BOOTSTRAP](https://img.shields.io/badge/-Bootstrap-000000?style=for-the-badge&logo=bootstrap)
  <br>
-Languages
+ Languages
  <br>
  ![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
  ![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5)
