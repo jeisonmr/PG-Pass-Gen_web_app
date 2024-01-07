@@ -9,7 +9,7 @@
 
 ## Download
 
-<!-- Version de Escritorio <a href="">Aquí</a> -->
+ Version de Escritorio <a href="https://drive.google.com/drive/folders/14EO31g8es-cLxPy2Txtx7FSTRV4Smyy6?usp=sharing">Aquí</a> 
 
 # Skills
 
